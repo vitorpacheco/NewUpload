@@ -74,3 +74,7 @@ echo $this->Form->input('size', array('type' => 'hidden'));
 ?>
 </code>
 </pre>
+
+h2. Copyright
+
+This project is based on "MeioUpload":https://github.com/jrbasso/MeioUpload plugin of Juan Basso. The copyright of the code snippets derived from this plugin belongs to its author.
