@@ -1,88 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>vitorpc/NewUpload @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #11058a;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #eefa75; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #eefa75; }
-    h3 { text-align: center; color: #eefa75; }
-    a { color: #eefa75; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+	<meta charset='utf-8'>
+	<title>vitorpc/NewUpload @ GitHub</title>
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
-
 <body>
-  <a href="http://github.com/vitorpc/NewUpload"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="http://github.com/vitorpc/NewUpload" class="first">Fork me on GitHub</a></li>
+				<li class="current_page_item"><a href="#">NewUpload</a></li>
+				<li><a href="http://github.com/vitorpc/NewUpload/zipball/master"> <img
+				border="0" width="90"
+				src="http://github.com/images/modules/download/zip.png">
+			</a></li>
+				<li><a href="http://github.com/vitorpc/NewUpload/tarball/master"> <img
+				border="0" width="90"
+				src="http://github.com/images/modules/download/tar.png">
+			</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+	</div>
 
-  <div id="container">
+	<div id="logo">
+		<h1><a href="http://github.com/vitorpc/NewUpload">NewUpload</a></h1>
+		<p><em> by <a href="http://github.com/vitorpc">vitorpc</a></em></p>
+		<p><em>Upload Behavior for CakePHP 2.0</em></p>
+	</div>
+	
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						<div class="post-bgtop">
+							<div class="post-bgbtm">
+								<h2 class="title"><a href="#">NewUpload Behavior</a></h2>
+								<div class="entry">
+									<p>An Upload Behavior for CakePHP 2.0.</p>
+									<p>This behavior allows you to optionally store in a database the
+										information about your uploads.</p>
+								</div>
+							</div>
+							<div class="post">
+								<div class="post-bgtop">
+									<div class="post-bgbtm">
+										<h2 class="title"><a href="#">Dependencies</a></h2>
+										<div class="entry">
+											<ul>
+												<li>CakePHP 2.0</li>
+												<li>PHP 5.3</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="post-bgtop">
+									<div class="post-bgbtm">
+										<h2 class="title"><a href="#">HowTo</a></h2>
+										<div class="entry">
+											<h2 class="title"><a href="#">Installation</a></h2>
+											<p>Get a copy of the code on GitHub.</p>
+											<p>Some methods to get code:</p>
 
-    <div class="download">
-      <a href="http://github.com/vitorpc/NewUpload/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/vitorpc/NewUpload/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+											<ul>
+												<li>Download the source code at this link: 
+													<a href="http://github.com/vitorpc/NewUpload/zipball/master">Download code from the branch master</a>
+												</li>
+												<li>Add it as a submodule of your project: 
+													<pre>git submodule add git://github.com/vitorpc/NewUpload.git Plugin/NewUpload</pre>
+												</li>
+												<li>Make a clone of the project: 
+													<pre>git clone git://github.com/vitorpc/NewUpload.git Plugin/NewUpload</pre>
+												</li>
+												<li>Add to your Config/bootstrap.php the following code: 
+													<pre>CakePlugin::load('NewUpload');</pre>
+												</li>
+											</ul>
 
-    <h1><a href="http://github.com/vitorpc/NewUpload">NewUpload</a>
-      <span class="small">by <a href="http://github.com/vitorpc">vitorpc</a></span></h1>
+											<h2 class="title"><a href="#">Usage</a></h2>
+											<p>You must specify the property <code>$actsAs</code> in their model.</p>
 
-    <div class="description">
-      Upload Behavior for CakePHP 2.0
-    </div>
-
-    <p>An Upload Behavior for CakePHP 2.0.
-
-This behavior allows you to optionally store in a database the information about your uploads.</p><h2>Dependencies</h2>
-<p>CakePHP 2.0
-PHP 5.3</p>
-<h2>Install</h2>
-<p>Installation
-
-Get a copy of the code on GitHub.
-
-Some methods to get code:
-
-    Download the source code at this link: Download code from the branch master
-    Add it as a submodule of your project: git submodule add git://github.com/vitorpc/NewUpload.git Plugin/NewUpload
-    Make a clone of the project: git clone git://github.com/vitorpc/NewUpload.git Plugin/NewUpload
-    Add to your Config/bootstrap.php the following code: CakePlugin::load('NewUpload');
-
-Usage
-
-You must specify the property $actsAs in their model.
-Basic
-
-
-<?php
+											<h2 class="title">Basic</h2>
+											<pre>
 class Image extends AppModel {
 	public $actsAs = array(
 		'NewUpload.NewUpload' => array('file')
 	);
 }
+											</pre>
 
-Full Usage
-
-
-<?php
+											<h2 class="title">Full Usage</h2>
+											<pre>
 class Image extends AppModel {
 	public $actsAs = array(
 		'NewUpload.NewUpload' => array(
@@ -104,52 +116,69 @@ class Image extends AppModel {
 		)
 	);
 }
+											</pre>
 
-View
+											<h2 class="title"><a href="#">View</a></h2>
+											<p>In your view, you must define the type of form and field to file, if
+												you are using the additional fields they should be defined as hidden.</p>
 
-In your view, you must define the type of form and field to file, if you are using the additional fields they should be defined as hidden.
 
-
-<?php
+<pre>
 echo $this->Form->create('Image', array('type' => 'file'));
 echo $this->Form->input('image', array('type' => 'file'));
 echo $this->Form->input('dir', array('type' => 'hidden'));
 echo $this->Form->input('mimetype', array('type' => 'hidden'));
 echo $this->Form->input('size', array('type' => 'hidden'));
-?></p>
-<h2>License</h2>
-<p>MIT License (http://www.opensource.org/licenses/mit-license.php)</p>
-<h2>Authors</h2>
-<p>Vitor Pacheco (vitor-p.c@hotmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Vitor Pacheco (vitor-p.c@hotmail.com)<br/>      </p>
+</pre>
 
+											<h2 class="title"><a href="#">License</a></h2>
+											<p>MIT License
+												(http://www.opensource.org/licenses/mit-license.php)</p>
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/vitorpc/NewUpload/zipball/master">zip</a> or
-      <a href="http://github.com/vitorpc/NewUpload/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/vitorpc/NewUpload</pre>
-    </p>
+											<h2 class="title"><a href="#">Authors</a></h2>
+											<p>Vitor Pacheco (vitor-p.c@hotmail.com)</p>
 
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/vitorpc/NewUpload">vitorpc/NewUpload</a>
-    </div>
+											<h2 class="title"><a href="#">Contact</a></h2>
+											<p>Vitor Pacheco (vitor-p.c@hotmail.com)</p>
 
-  </div>
+											<h2 class="title"><a href="#">Download</a></h2>
+											<p>You can download this project in either <a
+													href="http://github.com/vitorpc/NewUpload/zipball/master">zip</a> or
+												<a href="http://github.com/vitorpc/NewUpload/tarball/master">tar</a>
+												formats.</p>
+											<p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+												by running:</p>
+											<pre>$ git clone git://github.com/vitorpc/NewUpload</pre>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>get the source code on GitHub: <a
+					href="http://github.com/vitorpc/NewUpload">vitorpc/NewUpload</a><br />
+		Copyright (c) 2008 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+	</div>
 
-  <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-15471419-5");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl."
+				: "http://www.");
+		document
+				.write(unescape("%3Cscript src='"
+						+ gaJsHost
+						+ "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-15471419-5");
+			pageTracker._trackPageview();
+		} catch (err) {
+		}
+	</script>
 </body>
 </html>
