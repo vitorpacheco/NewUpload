@@ -1,0 +1,76 @@
+h1. NewUpload Behavior
+
+An Upload Behavior for CakePHP 2.0 
+This behavior allows you to optionally store in a database the information about your uploads.
+
+h2. Installation
+
+Get a copy of the code on GitHub.
+
+Some methods to get code:
+* Download the source code at this link: "Download code from the branch master":https://github.com/vitorpc/NewUpload/zipball/master
+* Add it as a submodule of your project: <code>git submodule add git://github.com/vitorpc/NewUpload.git Plugin/NewUpload</code>
+* Make a clone of the project: <code>git clone git://github.com/vitorpc/NewUpload.git Plugin/NewUpload</code>
+* Add to your Config/bootstrap.php the following code: <code>CakePlugin::load('NewUpload');</code>
+
+h2. Usage
+
+You must specify the property <code>$actsAs</code> in their model.
+
+h3. Basic
+
+<pre>
+<code>
+<?php
+class Image extends AppModel {
+	public $actsAs = array(
+		'NewUpload.NewUpload' => array('file')
+	);
+}
+</code>
+</pre>
+
+h3. Full Usage
+
+<pre>
+<code>
+<?php
+class Image extends AppModel {
+	public $actsAs = array(
+		'NewUpload.NewUpload' => array(
+			'file' => array(
+				// you can use shortcuts like: {DS} and {ModelName}
+				'dir' => '/path/to/images/folder/',		
+				// can be 'fix' or 'random'
+				'adjustFilename' => 'fix',
+				// fields of database
+				'fields' => array(
+					// type: VARCHAR(255)
+					'dir' => 'dir_field',
+					// type: VARCHAR(255)
+					'mimetype' => 'mimetype_field',
+					// type: INT
+					'size' => 'size_field,
+				), 
+			)
+		)
+	);
+}
+</code>
+</pre>
+
+h3. View
+
+In your view, you must define the type of form and field to file, if you are using the additional fields they should be defined as hidden.
+
+<pre>
+<code>
+<?php
+echo $this->Form->create('Image', array('type' => 'file'));
+echo $this->Form->input('image', array('type' => 'file'));
+echo $this->Form->input('dir', array('type' => 'hidden'));
+echo $this->Form->input('mimetype', array('type' => 'hidden'));
+echo $this->Form->input('size', array('type' => 'hidden'));
+?>
+</code>
+</pre>
