@@ -215,7 +215,7 @@ class NewUploadBehavior extends ModelBehavior {
  */
 	protected function _normalizePath($path) {
 		if ($path[0] !== '/' && $path[0] !== '\\' && !preg_match('/^[a-z]:/i', $path)) {
-			$path = WWW_ROOT . $path;
+			$path = WWW_ROOT . DS . $path;
 		}
 		return $path;
 	}
